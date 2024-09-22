@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine-Sweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <div class="game-container">
+        <h1>Mine-Sweeper</h1>
+        <div class="game-header-container">
+            <div class="mines-counter">000</div>
+            <div class="smiley-btn" onclick="restartGameBtn()">🙂</div>
+            <div class="timer">00:00</div>
+        </div>
+        <table class="table"></table>
+
+        <div class="lives-container">
+            <p>❤️ ❤️ ❤️</p>
+        </div>
+
+        <h2>Choose game level</h2>
+        <div class="btn-container">
+            <div class="beginner-btn" onclick="updateDifficultyAndInit(this)">Beginner</div>
+            <div class="medium-btn" onclick="updateDifficultyAndInit(this)">Medium</div>
+            <div class="expert-btn" onclick="updateDifficultyAndInit(this)">Expert</div>
+        </div>
+    </div>
+
+    <div class="overlay hidden"> 
+        <div class="victory-popup hidden">
+            <p>Congratulations!<br>you won 🎉</p>
+            <button class="btn-restart-game" onclick="restartGameBtn()">Restart Game</button>
+        </div>
+        <div class="loss-popup hidden">
+            <p>Unfortunately<br>You lost ☹️</p>
+            <button class="btn-restart-game" onclick="restartGameBtn()">Restart Game</button>
+        </div>    
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/board.js"></script>
+</body>
+
+</html>

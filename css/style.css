@@ -1,0 +1,170 @@
+.game-container {
+    background-color: rgb(196, 196, 196);
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid black;
+    margin: 0 auto;
+    padding-inline: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 40px;
+}
+
+.game-header-container {
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    background-color: rgb(245, 245, 245);
+    border: 3px solid black;
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+}
+
+.smiley-btn {
+    display: flex;
+    font-size: 45px;
+    cursor: pointer;
+    margin: 0 50px;
+}
+
+.mines-counter {
+    background-color: rgb(245, 245, 245);
+    border: 3px solid black;
+    padding: 0 5px;
+    margin-left: 150px;
+}
+
+
+.table {
+    background-color: rgb(142, 142, 142);
+    border: 2px solid black;
+    margin: 10px auto;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.cell {
+    border: 2px solid black;
+    background-color: #7c7c7c;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s, transform 0.1s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.cell:hover {
+    background-color: rgba(211, 211, 211, 0.555);
+}
+
+.revealed {
+    background-color: lightgrey;
+}
+
+.lives-container p{
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.beginner-btn,
+.medium-btn,
+.expert-btn {
+    background-color: rgb(240, 110, 110);
+    margin: 0 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.beginner-btn:hover,
+.medium-btn:hover,
+.expert-btn:hover {
+    background-color: aliceblue;
+}
+
+.victory-popup, .loss-popup{
+    position: fixed;
+    background-color: rgb(194, 193, 193);
+    height: 200px;
+    width: 350px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .victory-popup p, .loss-popup p {
+    display: block;
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+  }
+  
+  .btn-restart-game {
+    background-color: rgb(255, 117, 117);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px auto 0;
+    position: fixed;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+  
+  .btn-restart-game:hover {
+    background-color: rgba(234, 234, 234, 0.56);
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 92, 92, 0.555);
+    z-index: 999;
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
