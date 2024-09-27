@@ -10,41 +10,85 @@
 
 <body onload="onInit()">
     <div class="game-container">
-        <h1>Mine-Sweeper</h1>
+        <h1 class="page-title">Mine-Sweeper</h1>
         <div class="game-header-container">
-            <div class="mines-counter">000</div>
-            <div class="smiley-btn" onclick="restartGameBtn()">🙂</div>
-            <div class="timer">00:00</div>
+            <div class="mines-counter"></div>
+            <div class="smiley-btn" onclick="onRestartGame()">🙂</div>
+            <div class="timer"></div>
         </div>
         <table class="table"></table>
 
         <div class="lives-container">
-            <p></p>
+            <div class="lives"></div>
         </div>
 
-        <h2>Choose game level</h2>
+        <div class="hints-container">
+            <div class="hints" onclick="onHintClick()"></div>
+        </div>
+
+        <div class="safe-click-container">
+            <div class="safe-click-btn" onclick="onSafeClick()">Safe Click</div>
+        </div>
+        <p class="safe-click-title"><span></span> safe clicks available!</p>
+
+        <div class="undo-btn-container">
+            <div class="undo-btn" onclick="onUndoClick()">Undo ⟳</div>
+        </div>
+
+        <h2 class="game-level-title">Choose game level</h2>
         <div class="btn-container">
-            <div class="beginner-btn" onclick="updateDifficultyAndInit(this)">Beginner</div>
-            <div class="medium-btn" onclick="updateDifficultyAndInit(this)">Medium</div>
-            <div class="expert-btn" onclick="updateDifficultyAndInit(this)">Expert</div>
+            <div class="beginner-btn" onclick="onGameLevelClick(this)">Beginner</div>
+            <div class="medium-btn" onclick="onGameLevelClick(this)">Medium</div>
+            <div class="expert-btn" onclick="onGameLevelClick(this)">Expert</div>
         </div>
     </div>
-
-    <h2>Created by: Or Antebi</h2>
 
     <div class="overlay hidden">
         <div class="victory-popup hidden">
             <p>Congratulations!<br>you won 🎉</p>
-            <button class="btn-restart-game" onclick="restartGameBtn()">Restart Game</button>
+            <button class="btn-restart-game" onclick="onRestartGame()">Restart Game</button>
         </div>
         <div class="loss-popup hidden">
             <p>Unfortunately<br>You lost ☹️</p>
-            <button class="btn-restart-game" onclick="restartGameBtn()">Restart Game</button>
+            <button class="btn-restart-game" onclick="onRestartGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <div class="dark-mode-toggle" onclick="onToggleDarkMode(this)">Dark Mode 🌙</div>
+
+    <div class="best-score-container">
+        <h3 class="best-score-title">Best Score Per Level:</h3>
+        <div class="beginner-best-score">
+            <strong>Beginner</strong>
+            <br>
+            <span></span>
+        </div>
+        <div class="medium-best-score">
+            <strong>Medium</strong>
+            <br>
+            <span></span>
+        </div>
+        <div class="expert-best-score">
+            <strong>Expert</strong>
+            <br>
+            <span></span>
         </div>
     </div>
 
     <script src="js/utils.js"></script>
-    <script src="js/board.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gameLevels.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/lives.js"></script>
+    <script src="js/hints.js"></script>
+    <script src="js/safeClick.js"></script>
+    <script src="js/bestScore.js"></script>
+    <script src="js/winLoseModal.js"></script>
+    <script src="js/win.js"></script>
+    <script src="js/lose.js"></script>
+    <script src="js/restart.js"></script>
+    <script src="js/undo.js"></script>
+    <script src="js/darkMode.js"></script>
 </body>
 
 </html>

@@ -1,30 +1,41 @@
 @font-face {
     font-family: PermanentMarker-Regular;
-    src: url(../font/PermanentMarker-Regular.ttf);
+    src: url(font/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: dash-digital-7;
+    src: url(font/dash-digital-7.regular.ttf);
 }
 
 body {
+    width: 100%;
+    height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url('../img/abstract-uv-ultraviolet-light-composition.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    user-select: none;
 }
 
 .game-container {
-    background-color: rgb(196, 196, 196);
+    background-color: rgba(255, 255, 255, 0.6);
     width: fit-content;
-    border: 3px solid black;
-    margin: 0 auto;
-    padding-inline: 10px;
+    border-radius: 50px;
+    padding: 0 40px 20px 40px;
+    margin: 35px auto 15px auto;
 }
 
-h1 {
+.page-title {
     font-family: PermanentMarker-Regular;
     text-align: center;
-    margin: 20px 0 10px 0;
     font-size: 50px;
+    margin: 0;
 }
 
 .game-header-container {
     display: flex;
-    font-size: 35px;
+    font-size: 30px;
     justify-content: center;
     align-items: center;
 }
@@ -32,38 +43,37 @@ h1 {
 .timer {
     font-family: monospace;
     font-weight: bold;
-    background-color: rgb(245, 245, 245);
-    border: 3px solid black;
+    background-color: rgba(255, 250, 250, 0.548);
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 0 5px;
     justify-content: center;
     align-items: center;
-    margin-right: 120px;
 }
 
 .smiley-btn {
     display: flex;
-    font-size: 45px;
+    font-size: 40px;
     cursor: pointer;
-    margin: 0 50px;
+    margin: 0 40px;
 }
 
 .mines-counter {
     font-family: monospace;
     font-weight: bold;
-    background-color: rgb(245, 245, 245);
-    border: 3px solid black;
+    background-color: rgba(255, 250, 250, 0.548);
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 0 5px;
-    margin-left: 160px;
+    margin-left: 30px;
 }
-
 
 .table {
     background-color: rgb(142, 142, 142);
     border: 2px solid black;
     margin: 10px auto;
     text-align: center;
-    border-collapse: separate;
-    border-spacing: 5px;
+    border-collapse: collapse;
 }
 
 .cell {
@@ -80,7 +90,6 @@ h1 {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .cell:hover {
     background-color: rgba(211, 211, 211, 0.555);
 }
@@ -89,16 +98,82 @@ h1 {
     background-color: lightgrey;
 }
 
-.lives-container p{
+.lives {
+    display: flex;
+    justify-content: center;
     margin: 0;
-    text-align: center;
     font-size: 40px;
 }
 
+.hints-container {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
 
-h2 {
+.hints {
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.safe-click-container {
+    background-color: rgb(255, 140, 73);
+    display: flex;
+    width: fit-content;
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.safe-click-container:hover {
+    background-color: rgba(255, 250, 250, 0.719);
+}
+
+.safe-click-btn {
+    margin: 0;
+    font-weight: bold;
+}
+
+.safe-click-title {
+    color: rgba(0, 0, 0, 0.699);
     text-align: center;
-    margin-top: 3px;
+    margin: 5px;
+    font-size: 10px;
+    font-family: dash-digital-7;
+    font-weight: bold;
+}
+
+
+.undo-btn-container {
+    background-color: rgb(104, 126, 255);
+    display: flex;
+    width: fit-content;
+    border: 2px solid black;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.undo-btn-container:hover {
+    background-color: rgba(255, 250, 250, 0.719);
+}
+
+.undo-btn {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.game-level-title {
+    text-align: center;
+    margin-top: 10px;
     margin-bottom: 8px;
     font-size: 22px;
 }
@@ -106,30 +181,45 @@ h2 {
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
+.beginner-btn {
+    background-color: rgba(39, 202, 21, 0.9);
+}
+
+.medium-btn {
+    background-color: rgb(255, 166, 0, 0.9);
+}
+
+.expert-btn  {
+    background-color: rgb(255, 60, 0, 0.9);
+}
 
 .beginner-btn,
 .medium-btn,
 .expert-btn {
-    background-color: rgb(240, 110, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 20px;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
-    font-size: 20px;
-    padding: 5px 10px;
+    font-size: 15px;
+    padding: 8px;
     cursor: pointer;
-    margin-bottom: 20px;
+    font-weight: bold;
+    width: 70px;
 }
 
 .beginner-btn:hover,
 .medium-btn:hover,
 .expert-btn:hover {
-    background-color: aliceblue;
+    background-color: rgba(255, 250, 250, 0.7);
 }
 
-.victory-popup, .loss-popup{
+.victory-popup,
+.loss-popup {
     position: fixed;
     background-color: rgb(194, 193, 193);
     height: 200px;
@@ -142,15 +232,16 @@ h2 {
     font-size: 30px;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
-  .victory-popup p, .loss-popup p {
+}
+
+.victory-popup p,
+.loss-popup p {
     display: block;
     color: rgb(0, 0, 0);
     margin-top: 40px;
-  }
-  
-  .btn-restart-game {
+}
+
+.btn-restart-game {
     background-color: rgb(255, 117, 117);
     padding: 10px;
     border: 1px solid black;
@@ -161,14 +252,14 @@ h2 {
     position: fixed;
     bottom: 20px;
     transform: translateX(-50%);
-  }
-  
-  .btn-restart-game:hover {
+}
+
+.btn-restart-game:hover {
     background-color: rgba(234, 234, 234, 0.56);
     cursor: pointer;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -176,9 +267,111 @@ h2 {
     height: 100%;
     background-color: rgba(92, 92, 92, 0.555);
     z-index: 999;
-  }
-  
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
-  }
+}
+
+.dark-mode-toggle {
+    background-color: rgb(0, 0, 0, 0.9);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: fit-content;
+    height: 30px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.best-score-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin: 15px auto;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.best-score-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.beginner-best-score,
+.medium-best-score,
+.expert-best-score {
+    margin-bottom: 15px;
+}
+
+/************************* DARK MODE **************************/
+
+
+.game-container.dark-mode {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(235, 234, 234);
+}
+
+
+.timer.dark-mode {
+    border-color: rgb(235, 234, 234);
+}
+
+
+.mines-counter.dark-mode {
+    border-color: rgb(235, 234, 234);
+}
+
+.cell.dark-mode {
+    color: black;
+    border-color: rgb(235, 234, 234);
+}
+
+.safe-click-container.dark-mode {
+    border-color: rgba(235, 234, 234, 0.844);
+}
+
+.safe-click-title.dark-mode {
+    color: rgb(235, 234, 234);
+}
+
+.undo-btn-container.dark-mode {
+    border-color: rgba(235, 234, 234, 0.844);
+}
+
+.beginner-btn.dark-mode,
+.medium-btn.dark-mode,
+.expert-btn.dark-mode {
+    border-color: rgb(235, 234, 234);
+}
+
+.beginner-btn.dark-mode:hover,
+.medium-btn.dark-mode:hover,
+.expert-btn.dark-mode:hover {
+    background-color: rgba(255, 250, 250, 0.719);
+}
+
+.dark-mode-toggle.dark-mode {
+    background-color: rgba(255, 201, 52, 0.900);
+    color: rgb(235, 234, 234);
+    border-color: rgba(235, 234, 234, 0.819);
+}
+
+.dark-mode-toggle.dark-mode:hover {
+    background-color: rgba(255, 201, 52);
+}
+
+.best-score-container.dark-mode {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(235, 234, 234);
+}
