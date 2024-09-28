@@ -31,10 +31,6 @@
         </div>
         <p class="safe-click-title"><span></span> safe clicks available!</p>
 
-        <div class="undo-btn-container">
-            <div class="undo-btn" onclick="onUndoClick()">Undo ⟳</div>
-        </div>
-
         <h2 class="game-level-title">Choose game level</h2>
         <div class="btn-container">
             <div class="beginner-btn" onclick="onGameLevelClick(this)">Beginner</div>
@@ -54,7 +50,7 @@
         </div>
     </div>
 
-    <div class="dark-mode-toggle" onclick="onToggleDarkMode(this)">Dark Mode 🌙</div>
+    <div class="dark-mode-toggle" onclick="onDarkMode(this)">Dark Mode 🌙</div>
 
     <div class="best-score-container">
         <h3 class="best-score-title">Best Score Per Level:</h3>
@@ -87,7 +83,6 @@
     <script src="js/win.js"></script>
     <script src="js/lose.js"></script>
     <script src="js/restart.js"></script>
-    <script src="js/undo.js"></script>
     <script src="js/darkMode.js"></script>
 </body>
 

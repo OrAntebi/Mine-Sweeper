@@ -24,7 +24,7 @@ const gLevels = {
     Expert: { DIFFICULTY: 'Expert', SIZE: 12, MINES: 32 }
 }
 
-const gGame = {
+var gGame = {
     isOn: false,
     isDarkMode: false,
     difficulty: gLevels.Beginner.DIFFICULTY,
@@ -165,7 +165,6 @@ function calculateMinesNegsCount(board, cellI, cellJ) {
 
 // DONE
 function onCellClicked(elCell, i, j) {
-    
     var currCell = gBoard[i][j]
     
     if (currCell.isMarked || currCell.isShow) return

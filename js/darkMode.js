@@ -1,7 +1,7 @@
 'use strict'
 
 // DONE
-function onToggleDarkMode(elToggleDarkMode) {
+function onDarkMode(elToggleDarkMode) {
 
     if (!gGame.isDarkMode) {
         elToggleDarkMode.innerText = 'Light Mode ☀️'
@@ -18,7 +18,6 @@ function onToggleDarkMode(elToggleDarkMode) {
         '.cell',
         '.safe-click-container',
         '.safe-click-title',
-        '.undo-btn-container',
         '.beginner-btn',
         '.medium-btn',
         '.expert-btn',
