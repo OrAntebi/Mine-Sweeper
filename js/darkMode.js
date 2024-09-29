@@ -18,6 +18,7 @@ function onDarkMode(elToggleDarkMode) {
         '.cell',
         '.safe-click-container',
         '.safe-click-title',
+        '.mega-hint-container',
         '.beginner-btn',
         '.medium-btn',
         '.expert-btn',

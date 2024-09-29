@@ -117,7 +117,7 @@ body {
 }
 
 .safe-click-container {
-    background-color: rgb(255, 140, 73);
+    background-color: rgb(255, 140, 73, 0.7);
     display: flex;
     width: fit-content;
     border: 2px solid black;
@@ -130,7 +130,7 @@ body {
 }
 
 .safe-click-container:hover {
-    background-color: rgba(255, 250, 250, 0.719);
+    background-color: rgb(255, 140, 73);
 }
 
 .safe-click-btn {
@@ -141,10 +141,29 @@ body {
 .safe-click-title {
     color: rgba(0, 0, 0, 0.699);
     text-align: center;
-    margin: 5px;
+    margin: 5px auto 15px auto;
     font-size: 10px;
     font-family: dash-digital-7;
     font-weight: bold;
+}
+
+.mega-hint-container {
+    background-color: rgb(60, 151, 255, 0.8);
+    display: flex;
+    width: fit-content;
+    border: 2px solid black;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.mega-hint-container:hover {
+    background-color: rgb(60, 151, 255);
 }
 
 .game-level-title {
@@ -154,22 +173,10 @@ body {
     font-size: 22px;
 }
 
-.btn-container {
+.levels-btn-container {
     display: flex;
     justify-content: center;
     margin-top: 15px;
-}
-
-.beginner-btn {
-    background-color: rgba(39, 202, 21, 0.9);
-}
-
-.medium-btn {
-    background-color: rgb(255, 166, 0, 0.9);
-}
-
-.expert-btn  {
-    background-color: rgb(255, 60, 0, 0.9);
 }
 
 .beginner-btn,
@@ -188,10 +195,28 @@ body {
     width: 70px;
 }
 
-.beginner-btn:hover,
-.medium-btn:hover,
+.beginner-btn {
+    background-color: rgba(39, 202, 21, 0.8);
+}
+
+.medium-btn {
+    background-color: rgb(255, 166, 0, 0.8);
+}
+
+.expert-btn  {
+    background-color: rgb(255, 60, 0, 0.8);
+}
+
+.beginner-btn:hover {
+    background-color: rgba(39, 202, 21);
+}
+
+.medium-btn:hover {
+    background-color: rgb(255, 166, 0);
+}
+
 .expert-btn:hover {
-    background-color: rgba(255, 250, 250, 0.7);
+    background-color: rgb(255, 60, 0 ); 
 }
 
 .victory-popup,
@@ -290,7 +315,7 @@ body {
     margin-bottom: 15px;
 }
 
-/************************* DARK MODE **************************/
+/************************* DARK MODE *************************/
 
 
 .game-container.dark-mode {
@@ -321,26 +346,36 @@ body {
     color: rgb(235, 234, 234);
 }
 
+.mega-hint-container.dark-mode {
+    border-color: rgba(235, 234, 234, 0.844);
+}
+
 .beginner-btn.dark-mode,
 .medium-btn.dark-mode,
 .expert-btn.dark-mode {
     border-color: rgb(235, 234, 234);
 }
 
-.beginner-btn.dark-mode:hover,
-.medium-btn.dark-mode:hover,
+.beginner-btn.dark-mode:hover {
+    background-color: rgba(39, 202, 21);
+}
+
+.medium-btn.dark-mode:hover {
+    background-color: rgb(255, 166, 0);
+}
+
 .expert-btn.dark-mode:hover {
-    background-color: rgba(255, 250, 250, 0.719);
+    background-color: rgb(255, 60, 0 ); 
 }
 
 .dark-mode-toggle.dark-mode {
-    background-color: rgba(255, 201, 52, 0.900);
+    background-color: rgba(255, 201, 52, 0.800);
     color: rgb(235, 234, 234);
     border-color: rgba(235, 234, 234, 0.819);
 }
 
 .dark-mode-toggle.dark-mode:hover {
-    background-color: rgba(255, 201, 52);
+    background-color: rgba(255, 201, 52, 0.900);
 }
 
 .best-score-container.dark-mode {

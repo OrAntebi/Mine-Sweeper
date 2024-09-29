@@ -25,7 +25,13 @@ function revealNeighboringCells(board, cellI, cellJ) {
         for (var j = cellJ - 1; j <= cellJ + 1; j++) {
             if (j < 0 || j > board[i].length - 1) continue
 
-            if (board[i][j].isShow) continue
+            const currCell = board[i][j]
+            if (currCell.isShow) continue
+            if (currCell.isMarked) {
+                currCell.isMarked = false
+                gGame.markedCount--
+                updateMinesCounter(gGame.minesCount)
+            }
 
             revealCell(board, i, j);
             board[i][j].isShow = false

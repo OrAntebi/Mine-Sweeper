@@ -15,7 +15,13 @@ const REVEALED_CELL_BG = 'lightgrey'
 var gBoard
 var gTimerInterval
 var gHintIsClicked = false
-var gBoardHistory = []
+
+const gMegaHint = {
+    activated: false,
+    maxUses: 1,
+    start: null,
+    end: null
+}
 
 
 const gLevels = {
@@ -24,7 +30,7 @@ const gLevels = {
     Expert: { DIFFICULTY: 'Expert', SIZE: 12, MINES: 32 }
 }
 
-var gGame = {
+const gGame = {
     isOn: false,
     isDarkMode: false,
     difficulty: gLevels.Beginner.DIFFICULTY,
@@ -57,6 +63,10 @@ function onInit() {
 
 // DONE
 function initVariables() {
+    gMegaHint.activated = false
+    gMegaHint.maxUses = 1
+    gMegaHint.start = null
+    gMegaHint.end = null
     gHintIsClicked = false
     gGame.isOn = false
     gGame.livesCount = 3
@@ -181,6 +191,20 @@ function onCellClicked(elCell, i, j) {
     if (gHintIsClicked) {
         revealNeighboringCells(gBoard, i, j)
         gHintIsClicked = false
+        return
+    }
+
+    if (gMegaHint.activated && gMegaHint.maxUses) {
+        if (!gMegaHint.start) {
+            gMegaHint.start = { i, j };
+        } else {
+            gMegaHint.end = { i, j };
+            revealMegaHintCells(gBoard, gMegaHint.start, gMegaHint.end);
+            gMegaHint.maxUses--
+            gMegaHint.activated = false
+            gMegaHint.start = null
+            gMegaHint.end = null
+        }
         return
     }
     

@@ -5,9 +5,7 @@ function startTimer() {
     if (!gGame.isOn) return
     gTimerInterval = setInterval(() => {
         gGame.secsPassed++
-        const minutes = String(Math.floor(gGame.secsPassed / 60)).padStart(2, '0')
-        const seconds = String(gGame.secsPassed % 60).padStart(2, '0')
-        document.querySelector('.timer').innerText = `${minutes}:${seconds}`
+        updateTimerDisplay()
     }, 1000)
 
 }
@@ -21,6 +19,14 @@ function stopTimer() {
 // DONE
 function resetTimer() {
     clearInterval(gTimerInterval)
+    gTimerInterval = 0
     gGame.secsPassed = 0
     document.querySelector('.timer').innerText = '00:00'
+}
+
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(gGame.secsPassed / 60).toString().padStart(2, '0');
+    const seconds = (gGame.secsPassed % 60).toString().padStart(2, '0');
+    document.querySelector('.timer').innerText = `${minutes}:${seconds}`;
 }
