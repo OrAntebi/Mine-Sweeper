@@ -78,7 +78,7 @@ You can try the project live here:
 ### Option 1: Open Directly in Browser
 1. Clone or download the repository:
    ```bash
-   git clone https://github.com/OrAntebi/Mine-Sweeper-main.git
+   git clone https://github.com/OrAntebi/Mine-Sweeper.git
 
 ---
 
