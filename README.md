@@ -66,6 +66,13 @@ This project was built as a learning exercise to practice:
 
 ---
 
+## 🌐 Live Demo
+
+You can try the project live here:  
+👉 [Mine-Sweeper Live](https://orantebi.github.io/Mine-Sweeper/)
+
+---
+
 ## 🚀 How to Run the Game
 
 ### Option 1: Open Directly in Browser
