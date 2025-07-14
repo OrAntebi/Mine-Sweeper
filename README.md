@@ -72,3 +72,14 @@ This project was built as a learning exercise to practice:
 1. Clone or download the repository:
    ```bash
    git clone https://github.com/OrAntebi/Mine-Sweeper-main.git
+
+---
+
+## 📸 Screenshot
+
+Here’s what the game looks like while playing:
+
+<img width="700" alt="image1" src="https://github.com/user-attachments/assets/9667a5e4-33ce-4f8a-8a18-37795adc66d0" />
+<img width="700" alt="image2" src="https://github.com/user-attachments/assets/4a027f2a-debd-4a06-9393-516dffa4051a" />
+<img width="700" alt="image3" src="https://github.com/user-attachments/assets/e2aeb89c-d13f-44e9-ace0-a68f7910983e" />
+
