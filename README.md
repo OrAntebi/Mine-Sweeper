@@ -82,7 +82,7 @@ You can try the project live here:
 
 ---
 
-## 📸 Screenshot
+## 📸 Screenshots
 
 Here’s what the game looks like while playing:
 
